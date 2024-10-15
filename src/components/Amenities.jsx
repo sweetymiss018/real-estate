@@ -202,7 +202,7 @@ export default function Amenities() {
       {/* Heading with Icons */}
       <div className="w-1/3 flex flex-col items-center mb-8">
         
-        <h1 className="text-sky-950 text-4xl md:text-7xl font-serif font-semibold text-center  mb-0 z-10">
+        <h1 className="text-sky-950 text-4xl md:text-7xl md:left-4 font-serif font-semibold text-center  mb-0 z-10">
           Amenities <br /> & <br /> Facilities
         </h1>
         <div className="absolute flex justify-center items-center mt-0 bottom-40 left-72 gap-7">

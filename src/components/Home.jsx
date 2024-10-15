@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <motion.div id="home"
       className="bg-cover bg-center min-h-screen w-full overflow-y-hidden"
-      style={{ backgroundImage: `url(https://media.istockphoto.com/id/1159873271/photo/residential-area-in-the-city-modern-apartment-buildings.jpg?b=1&s=612x612&w=0&k=20&c=jAvFUVVp30nDNsNUeiUikC1dtW_gwqVclck9Ma2Y-SI=)` }}
+      style={{ backgroundImage: `url(image)` }}
       initial={{ scale: 1.2 }} // Initial scale (zoomed in)
       animate={{ scale: 1 }} // Final scale (normal)
       transition={{ duration: 1 }} // Duration of the zoom-out effect

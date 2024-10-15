@@ -55,16 +55,16 @@ const CallRequestPopup = () => {
     });
 
     // Hide popup after submission
-    setTimeout(() => setIsPopupVisible(false), 2000);
+    setTimeout(() => setIsPopupVisible(false), 5000);
   };
 
   return (
     <div>
       {isPopupVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-          <div className="relative bg-red-100 p-10 rounded-xl shadow-2xl max-w-lg w-full transform transition-all duration-300 ease-in-out">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center font-serif items-center z-[100]">
+          <div className="relative  bg-[#cabec0] p-10  w-full rounded-xl shadow-2xl max-w-lg  transform transition-all duration-300 ease-in-out">
             <button
-              className="absolute top-2 right-4 text-gray-600 text-lg hover:text-gray-900 transition"
+              className="absolute top-2 right-4 text-gray-600 text-5xl hover:text-gray-900 "
               onClick={() => setIsPopupVisible(false)}
             >
               &times;
@@ -74,7 +74,7 @@ const CallRequestPopup = () => {
             </h2>
 
             <form onSubmit={sendEmail} className="space-y-5">
-              <div className="border-b-2 border-gray-600 ">
+              <div className="border-b-2 border-gray-600 my-2">
                 {/* <label className="block text-gray-700 font-medium mb-1" htmlFor="name">
                   Your Name
                 </label> */}
@@ -86,14 +86,14 @@ const CallRequestPopup = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-2  rounded-lg bg-red-100 outline-none   transition"
+                  className="w-full py-2 my-3 rounded-lg bg-[#cabec0] outline-none  placeholder-gray-700 transition"
                 />
               </div>
 
-              <div>
-                <label className="block text-gray-700 font-medium mb-1" htmlFor="phone">
+              <div className="border-b-2 border-gray-600 my-2 ">
+                {/* <label className="block text-gray-700 font-medium mb-1" htmlFor="phone">
                   Phone Number
-                </label>
+                </label> */}
                 <input
                   type="tel"
                   id="phone"
@@ -103,28 +103,28 @@ const CallRequestPopup = () => {
                   required
                   pattern="[0-9]{10}"
                   placeholder="Enter 10-digit number"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                  className="w-full  py-2 my-3 rounded-lg bg-[#cabec0] outline-none placeholder-gray-700 transition"
                 />
               </div>
 
-              <div>
-                <label className="block text-gray-700 font-medium mb-1" htmlFor="message">
+              <div className="border-b-2 border-gray-600 my-2 "> 
+                {/* <label className="block text-gray-700 font-medium mb-1" htmlFor="message">
                   Message (Optional)
-                </label>
+                </label> */}
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  rows="4"
-                  placeholder="Any additional information..."
-                  className="w-full px-4 py-2 bg-gray-100 rounded-lg focus:outline-none  transition border-none"
+                  
+                  placeholder="(Optional)Any additional information..."
+                  className="w-full  py-2 my-3 bg-[#cabec0] rounded-lg placeholder-gray-700 transition outline-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1"
+                className="w-full bg-blue-600 text-white font-semibold px-6 py-2  rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1"
               >
                 Submit Request
               </button>
