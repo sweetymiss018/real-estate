@@ -1,0 +1,7 @@
+
+/* Add this to your main CSS file */
+.text-stroke {
+  font-size: 24vw;
+  -webkit-text-stroke: .2px #fff; /* Defines the stroke width and color */
+  color: transparent; /* Makes the inner text transparent so the stroke is visible */
+}
