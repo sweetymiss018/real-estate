@@ -93,7 +93,7 @@ const App = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          
+          <CallRequestPopup />
           <Navbar />
           <Home />
           <Amenities/>
