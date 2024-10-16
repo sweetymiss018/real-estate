@@ -103,7 +103,7 @@ const Navbar = () => {
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 right-0 h-full font-glitten bg-gray-800 w-[70%] md:w-[40%] transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 lg:h-full md:h-full h-[70%] pt-4 font-glitten bg-gray-800 w-[70%] md:w-[40%] transition-transform duration-500 ease-in-out ${
           menuOpen
             ? "translate-x-0 translate-y-0"
             : "translate-x-full -translate-y-full rounded-l-2xl"
