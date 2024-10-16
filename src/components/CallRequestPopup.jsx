@@ -13,7 +13,12 @@ const CallRequestPopup = () => {
 
   // Show popup when the page loads
   useEffect(() => {
-    setIsPopupVisible(true);
+    const timer = setTimeout(() => {
+      setIsPopupVisible(true);
+    }, 5000); // 5000 milliseconds = 5 seconds
+
+    // Cleanup function to clear the timer
+    return () => clearTimeout(timer);
   }, []);
 
   // Handle input changes
