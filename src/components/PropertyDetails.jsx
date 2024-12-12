@@ -48,7 +48,7 @@ const PropertyListing = () => {
 
   return (
     <div id="buyhome" className="property-listing-container lg:p-8 md:p-6 p-2 bg-gray-100 ">
-      <h2 className="lg:text-7xl md:text-5xl text-5xl font-bold font-serif  text-[#BC9170] mb-8">
+      <h2 className="lg:text-7xl md:text-5xl text-5xl font-bold font-serif  text-[#1A4797] mb-8">
         Property Listings
       </h2>
 

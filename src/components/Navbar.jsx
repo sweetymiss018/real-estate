@@ -10,9 +10,12 @@ import {
   FaShoppingCart,
   FaPhoneSquareAlt,
   FaInfoCircle,
+  FaLinkedin,
 } from "react-icons/fa"; // Import icons
-import { IoListOutline } from "react-icons/io5";
-import logo from "../assets/Clogo.png";
+import { CgMenuRight } from "react-icons/cg";
+import { SlCallOut } from "react-icons/sl";
+import { SiGmail } from "react-icons/si";
+import logo from "../assets/TrivaraLogo.png";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -72,20 +75,39 @@ const Navbar = () => {
           {/* Contact Section */}
           <div className="flex gap-2 lg:justify-center md:justify-center justify-start items-center w-1/3">
             {/* Phone Icon */}
-            <div className="hidden md:block lg:block border-2 rounded-full border-yellow-600 p-1 sm:p-2 md:p-3">
-              <FaPhoneVolume className="text-yellow-600 text-base sm:text-lg md:text-2xl lg:text-lg" />
-            </div>
+            <a href="tel:+919938845742">
+              <div className=" md:block lg:block border-2 rounded-full border-[#1A4797] p-1 sm:p-2 md:p-3">
+                <SlCallOut className="text-[#1A4797] text-base sm:text-lg md:text-2xl lg:text-lg" />
+              </div>
+            </a>
+            
+            <a
+              href="mailto:info@trivara.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-black transition-all duration-300"
+            >
+              <div className="hidden md:block lg:block border-2 rounded-full border-[#1A4797] p-1 sm:p-2 md:p-3">
+                <SiGmail className="text-[#1A4797] text-base sm:text-lg md:text-2xl lg:text-lg" />
+              </div>
+            </a>
 
-            {/* Phone Number */}
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl tracking-tight sm:tracking-normal md:tracking-wide lg:tracking-wider">
-              +91 1234567890
-            </p>
+            <a
+              href="https://www.linkedin.com/company/trivara/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-black transition-all duration-300"
+            >
+              <div className="hidden md:block lg:block border-2 rounded-full border-[#1A4797] p-1 sm:p-2 md:p-3">
+                <FaLinkedin className="text-[#1A4797] text-base sm:text-lg md:text-2xl lg:text-lg" />
+              </div>
+            </a>
           </div>
 
           {/* Logo Section */}
           <div className="flex justify-center w-1/3">
             <img
-              className="w-32 sm:w-36 md:w-40 lg:w-56 xl:w-64 h-auto object-contain" // Adjust width for different screen sizes
+              className="w-56 sm:w-56 md:w-56 lg:w-56 xl:w-64 h-auto object-contain" // Adjust width for different screen sizes
               src={logo}
               alt="Logo"
             />
@@ -95,7 +117,7 @@ const Navbar = () => {
           <div className="flex gap-3 items-center lg:justify-center md:justify-center justify-end w-1/3">
             <h2 className="text-2xl hidden md:block lg:block ">Menu</h2>
             <button onClick={handleShowMenuItem}>
-              <IoListOutline className="text-yellow-600 text-3xl md:text-3xl lg:text-4xl xl:text-5xl" />
+              <CgMenuRight className="text-yellow-600 text-3xl md:text-3xl lg:text-4xl xl:text-5xl mr-5 lg:mr-0" />
             </button>
           </div>
         </div>
@@ -103,7 +125,7 @@ const Navbar = () => {
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 right-0 h-full font-glitten bg-gray-800 w-[70%] md:w-[40%] transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-auto font-glitten bg-[#2d4761] w-[70%] md:w-[25%] transition-transform duration-500 ease-in-out ${
           menuOpen
             ? "translate-x-0 translate-y-0"
             : "translate-x-full -translate-y-full rounded-l-2xl"
@@ -135,7 +157,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.link}
-              className={`lg:text-3xl md:text-2xl text-xl font-semibold font-glitten tracking-[-2px] text-[#f0c71177] cursor-pointer hover:text-yellow-500 transform transition-all flex items-center gap-4 duration-500 ${
+              className={`lg:text-xl md:text-xl text-xl font-semibold font-serif tracking-[0px] text-[#f0c711c1] cursor-pointer hover:text-yellow-300 transform transition-all flex items-center gap-4 duration-500 ${
                 menuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-20 opacity-0"

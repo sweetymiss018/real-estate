@@ -33,6 +33,7 @@ const propertyListings = [
   },
   {
     image: "https://assotechpride.com/img/luxury-img4.jpg",
+    // image: "https://media.istockphoto.com/id/1352177016/photo/modern-living-room-interior-with-air-conditioner-orange-sofa-and-green-armchair.jpg?s=612x612&w=0&k=20&c=qciIZYk5CecMq1zO0KKsJUosWr-CUX4IaoflnC49JNA=",
     title: "Elevate Your Lifestyle!",
     description: [
       "Luxury homes designed for comfort.",
@@ -93,7 +94,7 @@ export default function Luxury() {
       </button>
 
       {/* Heading */}
-      <div className="absolute z-[100] text-6xl top-[-0.5vw] font-bold font-serif text-[#FDD09E]">
+      <div className="absolute z-[100] text-6xl top-[-0.5vw] font-bold font-serif text-[#d5a886]">
         <h1 >Luxury</h1>
         <h1>LifeStyle</h1>
       </div>

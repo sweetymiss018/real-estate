@@ -2,9 +2,9 @@ import React from 'react';
 
 function FloorPlan() {
   return (
-    <div id='floorplan' className="min-h-screen bg-red-50 lg:px-8 md:px-8 px-2 py-12 relative">
+    <div id='floorplan' className="h-auto bg-gray-100 lg:px-8 md:px-8 px-2 py-12 relative">
       {/* Title */}
-      <h1 className="lg:text-7xl md:text-5xl text-5xl text-[#BC9170] font-serif font-semibold lg:mb-20 md:mb-10 mb-10">Floor Plan</h1>
+      <h1 className="lg:text-7xl md:text-5xl text-5xl text-[#1A4797] font-serif font-semibold lg:mb-20 md:mb-10 mb-10">Floor Plan</h1>
 
       {/* Semi-circles using Tailwind CSS
       // <div className="absolute top-0 right-0 w-24 h-12 bg-[#BC9170] bg-opacity-20 rounded-tl-full rounded-br-full border-t-2 border-r-2 border-[#BC9170]"></div>

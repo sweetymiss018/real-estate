@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 const CallbackForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [authorized, setAuthorized] = useState(false);
 
@@ -15,21 +16,20 @@ const CallbackForm = () => {
       return;
     }
 
-    // Send email using EmailJS
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        { name, email, message },
-        "YOUR_USER_ID" // Replace with your EmailJS user ID
+        "service_pb2hfy9",
+        "template_z6n7ijl",
+        { name, email, phone, message },
+        "lVu6VEmeRmo8Ug6-k"
       )
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           alert("Message sent!");
-          // Reset form fields
           setName("");
           setEmail("");
+          setPhone("");
           setMessage("");
           setAuthorized(false);
         },
@@ -41,155 +41,115 @@ const CallbackForm = () => {
   };
 
   return (
-    // <div id='callback' className="relative flex items-center justify-center min-h-screen w-full bg-sky-950 z-[200]">
-    //   <div className="absolute top-10 left-10">
-    //     <span className="text-8xl font-serif font-extrabold bg-clip-text text-[#e1ac6b]">
-    //       Request <br /> Callback <br/>
-    //     </span>
-    //   </div>
-    //   <div className="absolute bottom-8 px-4 w-full  ">
-    //   <span className=" absolute bottom-0 text-4xl  font-serif font-extrabold bg-clip-text text-[#bfb2a1]">
-    //       You're just a call away from <br/> getting your dream Home!!!
-    //     </span>
-    //   </div>
-
-    //   <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-lg p-10 rounded-xl shadow-xl w-1/3 space-y-2 absolute right-20 transform transition duration-500 hover:scale-105">
-    //     <h2 className="text-4xl text-white text-center font-semibold">Get In Touch</h2>
-    //     <div>
-    //       <label className="block text-white text-lg mb-2">Name</label>
-    //       <input
-    //         type="text"
-    //         value={name}
-    //         onChange={(e) => setName(e.target.value)}
-    //         className="w-full p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-    //         placeholder="Enter your name"
-    //         required
-    //       />
-    //     </div>
-    //     <div>
-    //       <label className="block text-white text-lg mb-2">Email</label>
-    //       <input
-    //         type="email"
-    //         value={email}
-    //         onChange={(e) => setEmail(e.target.value)}
-    //         className="w-full p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-    //         placeholder="Enter your email"
-    //         required
-    //       />
-    //     </div>
-    //     <div>
-    //       <label className="block text-white text-lg mb-2">Message</label>
-    //       <textarea
-    //         value={message}
-    //         onChange={(e) => setMessage(e.target.value)}
-    //         className="w-full p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-    //         placeholder="Your message..."
-    //         required
-    //       />
-    //     </div>
-    //     <div className="flex items-center space-x-3">
-    //       <input
-    //         type="checkbox"
-    //         checked={authorized}
-    //         onChange={(e) => setAuthorized(e.target.checked)}
-    //         className="h-5 w-5 text-purple-600 bg-transparent border-2 border-white rounded focus:ring-2 focus:ring-purple-600"
-    //       />
-    //       <span className="text-white text-lg">I authorize to contact me</span>
-    //     </div>
-    //     <button
-    //       type="submit"
-    //       className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 rounded-lg hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-600 focus:ring-opacity-50 transition-all text-lg font-semibold"
-    //     >
-    //       Submit
-    //     </button>
-    //   </form>
-    // </div>
-
     <div
-      id="callback"
-      className="relative flex flex-col items-center justify-center min-h-screen w-full bg-sky-950 z-[200] sm:flex-row sm:justify-between sm:items-start"
-    >
-      {/* Request Callback Text */}
-      <div className="absolute top-2 md:top-10 left-5 md:left-10">
-        <span className="text-5xl sm:text-8xl font-serif font-extrabold bg-clip-text text-[#e1ac6b]">
-          Request <br /> Callback <br />
-        </span>
-      </div>
+  id="callback"
+  className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#16263b] px-2 py-4 sm:flex-row sm:justify-between sm:items-center sm:py-2 sm:px-10"
+>
+  {/* Request Callback Text */}
+  <div className="absolute top-5 left-5 sm:top-10 sm:left-10">
+    <span className="text-7xl sm:text-8xl md:text-8xl lg:text-7xl font-serif font-extrabold bg-clip-text text-[#BC9170]">
+      Request Callback
+    </span>
+  </div>
 
-      {/* Bottom Text */}
-      <div className="absolute bottom-4 px-4 w-full text-center sm:text-left sm:bottom-8 sm:px-8">
-        <span className="text-2xl sm:text-4xl font-serif font-extrabold bg-clip-text text-[#bfb2a1]">
-          You're just a call away from <br /> getting your dream Home!!!
-        </span>
-      </div>
+  {/* Bottom Text */}
+  <div className="absolute bottom-3 left-3 w-full text-center sm:text-left sm:bottom-6 sm:left-10">
+    <span className="text-3xl sm:text-md md:text-5xl lg:text-4xl font-serif font-extrabold bg-clip-text text-[#bfb2a1]">
+      You're just a call away from <br /> getting your dream Home!!!
+    </span>
+  </div>
 
-      {/* Form */}
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white/10 backdrop-blur-lg p-6 sm:p-10 rounded-xl shadow-xl w-[90%] sm:w-1/3 space-y-1 top-32 md:top-7 absolute  sm:right-20 sm:bottom-auto transform transition duration-500 hover:scale-105"
-      >
-        <h2 className="text-3xl sm:text-4xl text-white text-center font-semibold">
-          Get In Touch
-        </h2>
+  {/* Form */}
+  <form
+    onSubmit={handleSubmit}
+    className="bg-white/10 backdrop-blur-lg p-4 rounded-xl shadow-xl w-full max-w-[90%] sm:max-w-lg md:max-w-lg lg:max-w-xl space-y-3 sm:absolute sm:right-20 md:right-36 lg:right-10 hover:scale-105 transition-transform duration-500 ease-in-out"
+  >
+    <h2 className="text-lg sm:text-2xl md:text-3xl text-white text-center font-semibold">
+      Get In Touch
+    </h2>
 
-        {/* Name Input */}
-        <div>
-          <label className="block text-white text-lg mb-2">Name</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-3 sm:p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-
-        {/* Email Input */}
-        <div>
-          <label className="block text-white text-lg mb-2">Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 sm:p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-
-        {/* Message Input */}
-        <div>
-          <label className="block text-white text-lg mb-2">Message</label>
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-3 sm:p-4 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
-            placeholder="Your message..."
-            required
-          />
-        </div>
-
-        {/* Checkbox */}
-        <div className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={authorized}
-            onChange={(e) => setAuthorized(e.target.checked)}
-            className="h-5 w-5 text-purple-600 bg-transparent border-2 border-white rounded focus:ring-2 focus:ring-purple-600"
-          />
-          <span className="text-white text-lg">I authorize to contact me</span>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 rounded-lg hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-600 focus:ring-opacity-50 transition-all text-lg font-semibold"
-        >
-          Submit
-        </button>
-      </form>
+    {/* Name Input */}
+    <div>
+      <label className="block text-white text-sm md:text-base mb-2">
+        Name
+      </label>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full p-2 md:p-2.5 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
+        placeholder="Enter your name"
+        required
+      />
     </div>
+
+    {/* Email Input */}
+    <div>
+      <label className="block text-white text-sm md:text-base mb-2">
+        Email
+      </label>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full p-2 md:p-2.5 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+
+    {/* Mobile Input */}
+    <div>
+      <label className="block text-white text-sm md:text-base mb-2">
+        Mobile
+      </label>
+      <input
+        type="number"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        className="w-full p-2 md:p-2.5 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
+        placeholder="Enter your mobile number"
+        required
+      />
+    </div>
+
+    {/* Message Input */}
+    <div>
+      <label className="block text-white text-sm md:text-base mb-2">
+        Message
+      </label>
+      <textarea
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        className="w-full p-2 md:p-2.5 bg-white/20 text-white placeholder-gray-300 border border-transparent rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent transition-all"
+        placeholder="Your message..."
+        required
+      />
+    </div>
+
+    {/* Checkbox */}
+    <div className="flex items-center space-x-2">
+      <input
+        type="checkbox"
+        checked={authorized}
+        onChange={(e) => setAuthorized(e.target.checked)}
+        className="h-4 w-4 md:h-5 md:w-5 text-purple-600 bg-transparent border-2 border-white rounded focus:ring-2 focus:ring-purple-600"
+      />
+      <span className="text-white text-sm md:text-base">
+        I authorize to contact me
+      </span>
+    </div>
+
+    {/* Submit Button */}
+    <button
+      type="submit"
+      className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-2 md:py-2 rounded-lg hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-600 focus:ring-opacity-50 transition-all text-base font-semibold"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
   );
 };
 

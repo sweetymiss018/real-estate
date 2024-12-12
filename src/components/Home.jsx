@@ -8,7 +8,7 @@ const Home = () => {
     <motion.div
     id="home"
     className="bg-cover bg-center min-h-screen w-full overflow-hidden"
-    style={{ backgroundImage: `url(${image})` }} // Correct image URL format
+    style={{ backgroundImage: `url( https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 )` }} // Correct image URL format
     initial={{ scale: 1.2 }} // Start zoomed in
     animate={{ scale: 1 }} // Zoom out to normal
     transition={{ duration: 1 }} // Duration of zoom-out animation
@@ -21,7 +21,7 @@ const Home = () => {
 
       {/* First Text */}
       <motion.h1
-        className="text-[6.5vw] lg:text-[4.5vw] md:text-[4.8vw] font-glitten font-bold z-10"  // Keep z-10 for text to avoid interference
+        className="text-[7.5vw] lg:text-[4.5vw] md:text-[4.8vw] font-glitten font-bold z-10"  // Keep z-10 for text to avoid interference
         initial={{ y: 100, opacity: 0 }} // Start from below and invisible
         animate={{ y: 0, opacity: 1 }} // Move up and become visible
         transition={{ duration: 1.2, ease: "easeOut" }} // Animation timing
