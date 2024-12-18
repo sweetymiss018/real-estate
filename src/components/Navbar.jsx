@@ -15,6 +15,8 @@ import {
 import { CgMenuRight } from "react-icons/cg";
 import { SlCallOut } from "react-icons/sl";
 import { SiGmail } from "react-icons/si";
+import { RxValue } from "react-icons/rx";
+import { MdConnectWithoutContact } from "react-icons/md"
 import logo from "../assets/TrivaraLogo.png";
 
 const Navbar = () => {
@@ -133,14 +135,30 @@ const Navbar = () => {
       >
         <div className="lg:p-8 md:p-5 p-4 flex flex-col gap-6  md:gap-8 text-xl md:text-2xl">
           {[
-            { name: "Home", icon: <FaHome />, link: "#home" },
+            { 
+              name: "Home", 
+              icon: <FaHome />, 
+              link: "#home" },
+            { 
+              name: "About Us", 
+              icon: <FaInfoCircle />, 
+              link: "#aboutUs" 
+            },
             {
               name: "Amenities & Facilities",
               icon: <FaBuilding />,
               link: "#amenities",
             },
-            { name: "Gallery", icon: <FaImages />, link: "#gallery" },
-            { name: "Luxury Lifestyle", icon: <FaCrown />, link: "#lifestyle" },
+            { 
+              name: "Gallery", 
+              icon: <FaImages />, 
+              link: "#gallery" 
+            },
+            { 
+              name: "Luxury Lifestyle", 
+              icon: <FaCrown />, 
+              link: "#lifestyle" 
+            },
             {
               name: "Floor Plan",
               icon: <FaClipboardList />,
@@ -152,7 +170,17 @@ const Navbar = () => {
               icon: <FaPhoneSquareAlt />,
               link: "#callback",
             },
-            { name: "About Us", icon: <FaInfoCircle />, link: "#Footer" },
+            {
+              name: "Our Values",
+              icon : <RxValue/>,
+              link: "#ourValues"
+            },
+            {
+              name: "Contact Us",
+              icon : <MdConnectWithoutContact/>,
+              link: "#footer"
+            },
+            
           ].map((item, index) => (
             <a
               key={item.name}

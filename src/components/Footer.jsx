@@ -1,40 +1,45 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin } from 'react-feather';
-import logo from '../assets/TrivaraLogo.png'; // Make sure the logo path is correct
+import { MdLocationPin, MdPhone, MdEmail } from "react-icons/md"; // Import icons
+import logo from '../assets/TrivaraLogo.png'; // Ensure the logo path is correct
 
 export default function Footer() {
   return (
-    <div id='Footer' className="bg-gray-200 h-auto lg:min-h-screen md:min-h-screen sm:h-auto text-black py-1 px-6 z-0">
-      {/* Container for footer content */}
-      <div className="container mx-auto gap-4 flex flex-col items-center">
+    <div id='footer' className="bg-gray-200 h-auto text-black py-8 px-6 ">
+      <div className="container mx-auto text-center">
         {/* Company Logo */}
-        <img src={logo} alt="Trivara Pioneering Spaces" className="h-[30%] w-[50%] lg:w-[30%] mb-8" />
-        
+        <img src={logo} alt="Trivara Pioneering Spaces" className="mx-auto h-auto w-1/2 lg:w-1/4 mb-8" />
+
         {/* Contact Information */}
-        <div className="text-center mb-8">
-          <h2 className="text-xl font-semibold mb-1">Contact Us</h2>
-          <p className='mb-4'>
-            <a href="tel:+916743127088" className="text-[#BC9170]] text-4xl font-serif font-bold hover:scale-[5px] transition-all duration-300 ">
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <MdPhone className="text-2xl text-[#000]" />
+            <a href="tel:+916743127088" className="text-2xl  font-bold hover:underline">
               +91 674 312 7088
             </a>
-          </p>
-          <p>
-            <strong>Trivara Infraventures private Limited <br/>FLAT NO-SR/201, PLOT NO-5 , SR RESIDENCY, SURYA NAGAR, DELTA, BHUBANESWAR-751003, KHORDHA, ODISHA.</strong>
-          </p>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <MdLocationPin className="text-2xl text-[#000]" />
+            <p className="text-sm  font-bold">
+              Trivara Infraventures Private Limited<br />
+              FLAT NO-SR/201, PLOT NO-5, SR RESIDENCY, SURYA NAGAR,<br />
+              DELTA, BHUBANESWAR-751003, KHORDHA, ODISHA.
+            </p>
+          </div>
         </div>
 
         {/* Company Description */}
-        <div className="text-center max-w-lg mb-8">
+        <div className="mb-8">
           <p className="text-lg">
             At Trivara, we pioneer spaces that redefine luxury living. With cutting-edge architecture and innovative
-            designs, we create homes that stand the test of time, delivering comfort, elegance, and exclusivity.
+            designs,<br/> we create homes that stand the test of time, delivering comfort, elegance, and exclusivity.
           </p>
         </div>
 
         {/* Social Media Links */}
-        <div className="flex space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-8">
           <a
-            // href="https://www.facebook.com/yourcompany"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-black transition-all duration-300"
@@ -42,7 +47,6 @@ export default function Footer() {
             <Facebook size={32} />
           </a>
           <a
-            // href="https://www.instagram.com/yourcompany"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-black transition-all duration-300"
@@ -56,6 +60,14 @@ export default function Footer() {
             className="text-gray-400 hover:text-black transition-all duration-300"
           >
             <Linkedin size={32} />
+          </a>
+          <a
+            href='mailto:info@trivara.co.in'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-black transition-all duration-300"
+          >
+            <MdEmail size={32} />
           </a>
         </div>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import image from "../assets/Clogo.jpg";
 import HoverItem from "./HoverItem";
 
 const Home = () => {

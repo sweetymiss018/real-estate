@@ -3,7 +3,7 @@ import image from "../assets/b.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 h-full py-10 flex justify-center">
+    <div id="aboutUs" className="bg-gray-100 h-full py-10 flex justify-center">
       <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row md:items-start">
         {/* Left Side - 3D Company Photo */}
         <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
@@ -21,7 +21,7 @@ const AboutUs = () => {
         <div className="w-full md:w-1/2 md:pl-8">
           <section className="text-left">
             <h1 className="text-3xl sm:text-4xl font-bold text-[#1A4797] mb-6">
-              Our History
+              Our Story
             </h1>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
               Trivara was established in 2005 with a vision to transform the

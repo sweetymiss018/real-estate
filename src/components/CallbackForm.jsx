@@ -52,6 +52,17 @@ const CallbackForm = () => {
     </span>
   </div>
 
+  <iframe
+        className="map w-1/2 hidden"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7484.503512911215!2d85.8454036!3d20.289843900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a14fd5712c61%3A0x9b02a71f624c28dd!2sDaya%20Consultancy%20Services%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1689834516745!5m2!1sen!2sin"
+        // width={150}
+        height={400}
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+
   {/* Bottom Text */}
   <div className="absolute bottom-3 left-3 w-full text-center sm:text-left sm:bottom-6 sm:left-10">
     <span className="text-3xl sm:text-md md:text-5xl lg:text-4xl font-serif font-extrabold bg-clip-text text-[#bfb2a1]">
@@ -149,8 +160,9 @@ const CallbackForm = () => {
     </button>
   </form>
 </div>
-
   );
 };
 
 export default CallbackForm;
+
+

@@ -6,7 +6,6 @@ import Gallery from "./components/Gallery";
 import Amenities from "./components/Amenities";
 import "./App.css";
 import Footer from "./components/Footer";
-import Logo from "./assets/Clogo.png";
 import Luxury from "./components/Luxury";
 import FloorPlan from "./components/FloorPlan";
 import PropertyDetails from "./components/PropertyDetails";
@@ -14,7 +13,8 @@ import CallbackForm from "./components/CallbackForm";
 import Preloader from "./components/Preloader";
 import CallRequestPopup from "./components/CallRequestPopup";
 import AboutUs from "./components/AboutUs";
-import { FiPhoneCall } from "react-icons/fi";
+import WhyChooseUs from "./components/WhyChooseUs";
+import { MdContactSupport } from "react-icons/md";
 
 const App = () => {
   const containerRef = useRef(null);
@@ -55,6 +55,7 @@ const App = () => {
             <FloorPlan />
             <PropertyDetails />
             <CallbackForm />
+            <WhyChooseUs />
             <Footer />
           </motion.div>
 
@@ -64,7 +65,7 @@ const App = () => {
             className="fixed items-center justify-center bottom-4 right-4 px-6 py-3 h-20 w-20 lg:h-20 lg:w-20 text-sm rounded-full bg-[#1A4797] text-white hover:bg-[#008FD5] transition animate-bounce"
           >
             {/* Fix Quick Call */}
-            <FiPhoneCall className="text-white items-center justify-center w-8 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+            <MdContactSupport className="text-white items-center justify-center w-8 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
           </button>
 
           {/* Popup Form */}
